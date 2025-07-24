@@ -1,0 +1,5312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by scada with OMICRON IEDScout 4.20 licensed to OMICRON electronics-->
+<!--SCL Schema Version 3.1 (2012/10/22)-->
+<SCL version="2007" revision="B" xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL SCL.xsd">
+	<Header id="" version="" revision="" toolID="OMICRON IEDScout" nameStructure="IEDName" />
+	<Communication>
+		<SubNetwork name="NONE" type="8-MMS">
+			<ConnectedAP iedName="TRAFO5_2" apName="P1">
+				<Address>
+					<P type="IP" xsi:type="tP_IP">192.168.5.83</P>
+					<P type="OSI-TSEL" xsi:type="tP_OSI-TSEL">0001</P>
+					<P type="OSI-SSEL" xsi:type="tP_OSI-SSEL">0001</P>
+					<P type="OSI-PSEL" xsi:type="tP_OSI-PSEL">00000001</P>
+					<P type="OSI-AP-Title">1,1,1,999,1</P>
+					<P type="OSI-AP-Invoke" xsi:type="tP_OSI-AP-Invoke">0</P>
+					<P type="OSI-AE-Qualifier" xsi:type="tP_OSI-AE-Qualifier">12</P>
+					<P type="OSI-AE-Invoke" xsi:type="tP_OSI-AE-Invoke">0</P>
+					<P type="MMS-Port" xsi:type="tP_MMS-Port">102</P>
+				</Address>
+				<GSE ldInst="Ctrl" cbName="gcbST">
+					<Address>
+						<P type="MAC-Address" xsi:type="tP_MAC-Address">01-0C-CD-01-00-00</P>
+						<P type="APPID" xsi:type="tP_APPID">010B</P>
+						<P type="VLAN-ID" xsi:type="tP_VLAN-ID">000</P>
+						<P type="VLAN-PRIORITY" xsi:type="tP_VLAN-PRIORITY">4</P>
+					</Address>
+					<MinTime unit="s" multiplier="m">500</MinTime>
+					<MaxTime unit="s" multiplier="m">5000</MaxTime>
+				</GSE>
+			</ConnectedAP>
+		</SubNetwork>
+	</Communication>
+	<IED name="TRAFO5_2">
+		<Services>
+			<DynAssociation />
+			<GetDirectory />
+			<GetDataObjectDefinition />
+			<DataObjectDirectory />
+			<GetDataSetValue />
+			<SetDataSetValue />
+			<DataSetDirectory />
+			<ConfDataSet max="22" modify="false" />
+			<DynDataSet max="42" />
+			<ReadWrite />
+			<ConfReportControl max="105" bufConf="false" />
+			<GetCBValues />
+			<ReportSettings rptID="Dyn" optFields="Dyn" bufTime="Dyn" trgOps="Dyn" intgPd="Dyn" owner="true" />
+			<ConfLNs fixPrefix="true" fixLnInst="true" />
+			<GOOSE max="1" />
+			<GSSE max="0" />
+			<FileHandling />
+		</Services>
+		<AccessPoint name="P1">
+			<Server>
+				<Authentication none="true" />
+				<LDevice inst="Ctrl">
+					<LN0 lnType="TRAFO5_2Ctrl.LLN0" lnClass="LLN0" inst="">
+						<DataSet name="dsGoose">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind10" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind11" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind12" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind13" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind14" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind15" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind16" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind17" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind18" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind19" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind20" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind21" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind22" fc="ST" />
+						</DataSet>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="ldNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="lnNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcName">
+								<Val></Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<GSEControl name="gcbST" type="GOOSE" datSet="dsGoose" appID="TRAFO5_2/LLN0$gcbST" fixedOffs="false" confRev="1" />
+					</LN0>
+					<LN lnType="TRAFO5_2Ctrl.GGIO1" lnClass="GGIO" inst="1">
+						<DataSet name="dsDPCSO">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO10" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND1">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Health" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind10" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind11" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind12" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind13" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind14" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind15" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind16" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind17" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind18" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind19" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind20" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="ISCSO1" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND2">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind21" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind22" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind23" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind24" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind25" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind26" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind27" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind28" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind29" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind30" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind31" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="Ind32" fc="ST" />
+						</DataSet>
+						<DataSet name="dsMX">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn4" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn5" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn6" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn7" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn8" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn9" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn10" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn11" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn12" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn13" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn14" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn15" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn16" fc="MX" />
+						</DataSet>
+						<ReportControl name="urcbDPCSO" rptID="Ctrl/GGIO1$urcbDPCSO" buffered="false" bufTime="0" datSet="dsDPCSO" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDA" rptID="Ctrl/GGIO1$urcbINDA" buffered="false" bufTime="0" datSet="dsIND1" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDB" rptID="Ctrl/GGIO1$urcbINDB" buffered="false" bufTime="0" datSet="dsIND2" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="Ctrl/GGIO1$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind3">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind4">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind5">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind6">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind7">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind8">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind9">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind10">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind11">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind12">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind13">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind14">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind15">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind16">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind17">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind18">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind19">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind20">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind21">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind22">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind23">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind24">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind25">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind26">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind27">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind28">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind29">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind30">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind31">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind32">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO12">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO13">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO14">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO15">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO16">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ISCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="minVal">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="maxVal">
+								<Val>20</Val>
+							</DAI>
+							<DAI name="stepSize">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>tap indication</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Ctrl.GGIO1" lnClass="GGIO" inst="2">
+						<DataSet name="dsDPCSO">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO10" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND1">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Health" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind10" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind11" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind12" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind13" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind14" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind15" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind16" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind17" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind18" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind19" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind20" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="ISCSO1" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND2">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind21" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind22" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind23" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind24" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind25" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind26" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind27" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind28" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind29" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind30" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind31" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="Ind32" fc="ST" />
+						</DataSet>
+						<DataSet name="dsMX">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn4" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn5" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn6" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn7" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn8" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn9" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn10" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn11" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn12" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn13" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn14" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn15" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn16" fc="MX" />
+						</DataSet>
+						<ReportControl name="urcbDPCSO" rptID="Ctrl/GGIO2$urcbDPCSO" buffered="false" bufTime="0" datSet="dsDPCSO" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDA" rptID="Ctrl/GGIO2$urcbINDA" buffered="false" bufTime="0" datSet="dsIND1" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDB" rptID="Ctrl/GGIO2$urcbINDB" buffered="false" bufTime="0" datSet="dsIND2" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="Ctrl/GGIO2$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind3">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind4">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind5">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind6">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind7">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind8">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind9">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind10">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind11">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind12">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind13">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind14">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind15">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind16">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind17">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind18">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind19">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind20">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind21">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind22">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind23">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind24">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind25">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind26">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind27">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind28">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind29">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind30">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind31">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind32">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO12">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO13">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO14">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO15">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO16">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ISCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="minVal">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="maxVal">
+								<Val>20</Val>
+							</DAI>
+							<DAI name="stepSize">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>tap indication</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Ctrl.GGIO1" lnClass="GGIO" inst="3">
+						<DataSet name="dsDPCSO">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO10" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND1">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Health" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind3" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind4" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind5" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind6" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind7" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind8" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind9" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind10" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind11" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind12" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind13" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind14" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind15" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind16" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind17" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind18" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind19" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind20" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="ISCSO1" fc="ST" />
+						</DataSet>
+						<DataSet name="dsIND2">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind21" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind22" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind23" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind24" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind25" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind26" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind27" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind28" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind29" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind30" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind31" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="Ind32" fc="ST" />
+						</DataSet>
+						<DataSet name="dsMX">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn4" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn5" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn6" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn7" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn8" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn9" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn10" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn11" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn12" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn13" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn14" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn15" fc="MX" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn16" fc="MX" />
+						</DataSet>
+						<ReportControl name="urcbDPCSO" rptID="Ctrl/GGIO3$urcbDPCSO" buffered="false" bufTime="0" datSet="dsDPCSO" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDA" rptID="Ctrl/GGIO3$urcbINDA" buffered="false" bufTime="0" datSet="dsIND1" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbINDB" rptID="Ctrl/GGIO3$urcbINDB" buffered="false" bufTime="0" datSet="dsIND2" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="Ctrl/GGIO3$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind3">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind4">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind5">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind6">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind7">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind8">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind9">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind10">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind11">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind12">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind13">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind14">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind15">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind16">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind17">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind18">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind19">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind20">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind21">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind22">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind23">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind24">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind25">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind26">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind27">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind28">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind29">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind30">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind31">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind32">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO12">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO13">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO14">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO15">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO16">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO3">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO4">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO5">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO6">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO7">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO8">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO9">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO10">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO11">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="ISCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="minVal">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="maxVal">
+								<Val>20</Val>
+							</DAI>
+							<DAI name="stepSize">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>tap indication</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Ctrl.LPHD1" lnClass="LPHD" inst="1">
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>2.0</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="serNum">
+								<Val>123456789</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>UC504</Val>
+							</DAI>
+							<DAI name="location">
+								<Val>jakarta</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Proxy">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="PwrUp">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Ctrl.YLTC1" lnClass="YLTC" inst="1">
+						<DataSet name="dsYLTC">
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="Mod" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="Beh" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="Health" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="TCIP" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="Ind1" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="Ind2" fc="ST" />
+							<FCDA ldInst="Ctrl" prefix="" lnClass="YLTC" lnInst="1" doName="TapChg" fc="ST" />
+						</DataSet>
+						<ReportControl name="urcbYLTC" rptID="Ctrl/YLTC1$urcbYLTC" buffered="false" bufTime="0" datSet="dsYLTC" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TapChg">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val></Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val></Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="dU">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN>
+				</LDevice>
+				<LDevice inst="Meas">
+					<LN0 lnType="TRAFO5_2Ctrl.LLN0" lnClass="LLN0" inst="">
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="ldNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="lnNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcName">
+								<Val></Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN0>
+					<LN lnType="TRAFO5_2Ctrl.LPHD1" lnClass="LPHD" inst="1">
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>2.0</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="serNum">
+								<Val>123456789</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>UC504</Val>
+							</DAI>
+							<DAI name="location">
+								<Val>jakarta</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Proxy">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="PwrUp">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Meas.MMXU1" lnClass="MMXU" inst="1">
+						<DataSet name="dsMMXU">
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="Health" fc="ST" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="TotW" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="TotVAr" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="TotVA" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="TotPF" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="Hz" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="PhV" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="A" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="1" doName="PPV" fc="MX" />
+						</DataSet>
+						<ReportControl name="urcbMX" rptID="Meas/MMXU1$urcbMX" buffered="false" bufTime="0" datSet="dsMMXU" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val></Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val></Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="dU">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotW">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>P</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVAr">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Q</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVA">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotPF">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>COS</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Hz">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>f</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PPV">
+							<SDI name="phsAB">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uab</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsBC">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ubc</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsCA">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uca</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Line Voltage</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PhV">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ua</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ub</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uc</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="net">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="res">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3U0_Cal</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Phase Voltage</Val>
+							</DAI>
+						</DOI>
+						<DOI name="A">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ia</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ib</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ic</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3I0_Ext1</Val>
+								</DAI>
+							</SDI>
+							<SDI name="net">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="res">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3I0_Cal</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Phase Current</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Meas.MMXU1" lnClass="MMXU" inst="2">
+						<DataSet name="dsMMXU">
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="Health" fc="ST" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="TotW" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="TotVAr" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="TotVA" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="TotPF" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="Hz" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="PhV" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="A" fc="MX" />
+							<FCDA ldInst="Meas" prefix="" lnClass="MMXU" lnInst="2" doName="PPV" fc="MX" />
+						</DataSet>
+						<ReportControl name="urcbMX" rptID="Meas/MMXU2$urcbMX" buffered="false" bufTime="0" datSet="dsMMXU" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Mod">
+							<DAI name="ctlModel">
+								<Val>status-only</Val>
+							</DAI>
+						</DOI>
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val></Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val></Val>
+							</DAI>
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+							<DAI name="dU">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotW">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>P</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVAr">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Q</Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotVA">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="TotPF">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>COS</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Hz">
+							<SDI name="units">
+								<DAI name="multiplier">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<DAI name="db">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="zeroDb">
+								<Val>0</Val>
+							</DAI>
+							<SDI name="sVC">
+								<DAI name="scaleFactor">
+									<Val>0.0</Val>
+								</DAI>
+								<DAI name="offset">
+									<Val>0.0</Val>
+								</DAI>
+							</SDI>
+							<SDI name="rangeC">
+								<SDI name="hhLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="hLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="lLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="llLim">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="min">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="max">
+									<DAI name="f">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+							</SDI>
+							<DAI name="smpRate">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>f</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PPV">
+							<SDI name="phsAB">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uab</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsBC">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ubc</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsCA">
+								<SDI name="units">
+									<DAI name="SIUnit">
+										<Val>V</Val>
+									</DAI>
+									<DAI name="multiplier">
+										<Val>k</Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uca</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Line Voltage</Val>
+							</DAI>
+						</DOI>
+						<DOI name="PhV">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ua</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ub</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Uc</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="net">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="res">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3U0_Cal</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Phase Voltage</Val>
+							</DAI>
+						</DOI>
+						<DOI name="A">
+							<SDI name="phsA">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ia</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsB">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ib</Val>
+								</DAI>
+							</SDI>
+							<SDI name="phsC">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>Ic</Val>
+								</DAI>
+							</SDI>
+							<SDI name="neut">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3I0_Ext1</Val>
+								</DAI>
+							</SDI>
+							<SDI name="net">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val></Val>
+								</DAI>
+							</SDI>
+							<SDI name="res">
+								<SDI name="units">
+									<DAI name="multiplier">
+										<Val></Val>
+									</DAI>
+								</SDI>
+								<DAI name="db">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="zeroDb">
+									<Val>0</Val>
+								</DAI>
+								<SDI name="rangeC">
+									<SDI name="hhLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="hLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="lLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="llLim">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="min">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+									<SDI name="max">
+										<DAI name="f">
+											<Val>0.0</Val>
+										</DAI>
+									</SDI>
+								</SDI>
+								<SDI name="magSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<SDI name="angSVC">
+									<DAI name="scaleFactor">
+										<Val>0.0</Val>
+									</DAI>
+									<DAI name="offset">
+										<Val>0.0</Val>
+									</DAI>
+								</SDI>
+								<DAI name="angRef">
+									<Val>V</Val>
+								</DAI>
+								<DAI name="smpRate">
+									<Val>0</Val>
+								</DAI>
+								<DAI name="dU">
+									<Val>3I0_Cal</Val>
+								</DAI>
+							</SDI>
+							<DAI name="angRef">
+								<Val>Va</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>Phase Current</Val>
+							</DAI>
+						</DOI>
+					</LN>
+				</LDevice>
+				<LDevice inst="System">
+					<LN0 lnType="TRAFO5_2Ctrl.LLN0" lnClass="LLN0" inst="">
+						<DOI name="NamPlt">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="dU">
+								<Val>0</Val>
+							</DAI>
+							<DAI name="configRev">
+								<Val>1</Val>
+							</DAI>
+							<DAI name="ldNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="lnNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcNs">
+								<Val></Val>
+							</DAI>
+							<DAI name="cdcName">
+								<Val></Val>
+							</DAI>
+							<DAI name="dataNs">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN0>
+					<LN lnType="TRAFO5_2System.GGIO1" lnClass="GGIO" inst="1">
+						<DataSet name="dsMX">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="AnIn4" fc="MX" />
+						</DataSet>
+						<DataSet name="dsST">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="Health" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="Ind1" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="Ind2" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="1" doName="DPCSO1" fc="ST" />
+						</DataSet>
+						<ReportControl name="urcbST" rptID="System/GGIO1$urcbST" buffered="false" bufTime="0" datSet="dsST" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="System/GGIO1$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2System.GGIO1" lnClass="GGIO" inst="2">
+						<DataSet name="dsMX">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="AnIn4" fc="MX" />
+						</DataSet>
+						<DataSet name="dsST">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="Health" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="Ind1" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="Ind2" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="2" doName="DPCSO1" fc="ST" />
+						</DataSet>
+						<ReportControl name="urcbST" rptID="System/GGIO2$urcbST" buffered="false" bufTime="0" datSet="dsST" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="System/GGIO2$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2System.GGIO1" lnClass="GGIO" inst="3">
+						<DataSet name="dsMX">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn1" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn2" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn3" fc="MX" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="AnIn4" fc="MX" />
+						</DataSet>
+						<DataSet name="dsST">
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="Health" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="Ind1" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="Ind2" fc="ST" />
+							<FCDA ldInst="System" prefix="" lnClass="GGIO" lnInst="3" doName="DPCSO1" fc="ST" />
+						</DataSet>
+						<ReportControl name="urcbST" rptID="System/GGIO3$urcbST" buffered="false" bufTime="0" datSet="dsST" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<ReportControl name="urcbMX" rptID="System/GGIO3$urcbMX" buffered="false" bufTime="0" datSet="dsMX" intgPd="0" confRev="1">
+							<TrgOps dchg="true" qchg="true" dupd="true" period="true" gi="true" />
+							<OptFields seqNum="true" timeStamp="true" dataSet="true" reasonCode="true" dataRef="false" entryID="false" configRef="true" />
+							<RptEnabled max="5" />
+						</ReportControl>
+						<DOI name="Ind1">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="Ind2">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="SPCSO2">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+						<DOI name="DPCSO1">
+							<DAI name="ctlModel">
+								<Val>sbo-with-enhanced-security</Val>
+							</DAI>
+							<DAI name="d">
+								<Val>digital input</Val>
+							</DAI>
+						</DOI>
+					</LN>
+					<LN lnType="TRAFO5_2Ctrl.LPHD1" lnClass="LPHD" inst="1">
+						<DOI name="PhyNam">
+							<DAI name="vendor">
+								<Val>integrateknik</Val>
+							</DAI>
+							<DAI name="hwRev">
+								<Val>2.0</Val>
+							</DAI>
+							<DAI name="swRev">
+								<Val>0.8.2</Val>
+							</DAI>
+							<DAI name="serNum">
+								<Val>123456789</Val>
+							</DAI>
+							<DAI name="model">
+								<Val>UC504</Val>
+							</DAI>
+							<DAI name="location">
+								<Val>jakarta</Val>
+							</DAI>
+						</DOI>
+						<DOI name="Proxy">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+						<DOI name="PwrUp">
+							<DAI name="d">
+								<Val></Val>
+							</DAI>
+						</DOI>
+					</LN>
+				</LDevice>
+			</Server>
+		</AccessPoint>
+	</IED>
+	<DataTypeTemplates>
+		<LNodeType id="TRAFO5_2Ctrl.GGIO1" lnClass="GGIO">
+			<DO name="AnIn1" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn2" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn3" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn4" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn5" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn6" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn7" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn8" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn9" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn10" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn11" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn12" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn13" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn14" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn15" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn16" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="Beh" type="TRAFO5_2Ctrl.LLN0.Beh" />
+			<DO name="Health" type="TRAFO5_2Ctrl.LLN0.Health" />
+			<DO name="Ind1" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind2" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind3" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind4" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind5" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind6" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind7" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind8" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind9" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind10" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind11" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind12" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind13" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind14" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind15" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind16" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind17" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind18" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind19" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind20" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind21" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind22" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind23" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind24" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind25" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind26" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind27" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind28" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind29" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind30" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind31" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind32" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="SPCSO1" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO2" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO3" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO4" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO5" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO6" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO7" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO8" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO9" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO10" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO11" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO12" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO13" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO14" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO15" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO16" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="DPCSO1" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO2" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO3" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO4" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO5" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO6" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO7" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO8" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO9" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO10" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="DPCSO11" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+			<DO name="ISCSO1" type="TRAFO5_2Ctrl.GGIO1.ISCSO1" />
+		</LNodeType>
+		<LNodeType id="TRAFO5_2System.GGIO1" lnClass="GGIO">
+			<DO name="AnIn1" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn2" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn3" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="AnIn4" type="TRAFO5_2Ctrl.GGIO1.AnIn1" />
+			<DO name="Beh" type="TRAFO5_2Ctrl.LLN0.Beh" />
+			<DO name="Health" type="TRAFO5_2Ctrl.LLN0.Health" />
+			<DO name="Ind1" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="Ind2" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="SPCSO1" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="SPCSO2" type="TRAFO5_2Ctrl.GGIO1.SPCSO1" />
+			<DO name="DPCSO1" type="TRAFO5_2Ctrl.GGIO1.DPCSO1" />
+		</LNodeType>
+		<LNodeType id="TRAFO5_2Ctrl.LLN0" lnClass="LLN0">
+			<DO name="Beh" type="TRAFO5_2Ctrl.LLN0.Beh" />
+			<DO name="Health" type="TRAFO5_2Ctrl.LLN0.Health" />
+			<DO name="NamPlt" type="TRAFO5_2Ctrl.LLN0.NamPlt" />
+		</LNodeType>
+		<LNodeType id="TRAFO5_2Ctrl.LPHD1" lnClass="LPHD">
+			<DO name="PhyHealth" type="TRAFO5_2Ctrl.LPHD1.PhyHealth" />
+			<DO name="PhyNam" type="TRAFO5_2Ctrl.LPHD1.PhyNam" />
+			<DO name="Proxy" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+			<DO name="PwrUp" type="TRAFO5_2Ctrl.GGIO1.Ind1" />
+		</LNodeType>
+		<LNodeType id="TRAFO5_2Meas.MMXU1" lnClass="MMXU">
+			<DO name="Mod" type="TRAFO5_2Ctrl.YLTC1.Mod" />
+			<DO name="Beh" type="TRAFO5_2Ctrl.LLN0.Beh" />
+			<DO name="Health" type="TRAFO5_2Ctrl.LLN0.Health" />
+			<DO name="NamPlt" type="TRAFO5_2Ctrl.YLTC1.NamPlt" />
+			<DO name="TotW" type="TRAFO5_2Meas.MMXU1.TotW" />
+			<DO name="TotVAr" type="TRAFO5_2Meas.MMXU1.TotW" />
+			<DO name="TotVA" type="TRAFO5_2Meas.MMXU1.TotW" />
+			<DO name="TotPF" type="TRAFO5_2Meas.MMXU1.TotW" />
+			<DO name="Hz" type="TRAFO5_2Meas.MMXU1.TotW" />
+			<DO name="PPV" type="TRAFO5_2Meas.MMXU1.PPV" />
+			<DO name="PhV" type="TRAFO5_2Meas.MMXU1.PhV" />
+			<DO name="A" type="TRAFO5_2Meas.MMXU1.PhV" />
+		</LNodeType>
+		<LNodeType id="TRAFO5_2Ctrl.YLTC1" lnClass="YLTC">
+			<DO name="Mod" type="TRAFO5_2Ctrl.YLTC1.Mod" />
+			<DO name="Beh" type="TRAFO5_2Ctrl.LLN0.Beh" />
+			<DO name="Health" type="TRAFO5_2Ctrl.LLN0.Health" />
+			<DO name="TCIP" type="TRAFO5_2Ctrl.YLTC1.TCIP" />
+			<DO name="Ind1" type="TRAFO5_2Ctrl.YLTC1.TCIP" />
+			<DO name="Ind2" type="TRAFO5_2Ctrl.YLTC1.TCIP" />
+			<DO name="TapChg" type="TRAFO5_2Ctrl.YLTC1.TapChg" />
+			<DO name="NamPlt" type="TRAFO5_2Ctrl.YLTC1.NamPlt" />
+		</LNodeType>
+		<DOType id="TRAFO5_2Ctrl.YLTC1.TapChg" cdc="BSC">
+			<DA name="origin" fc="ST" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.origin" />
+			<DA name="valWTr" fc="ST" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.valWTr" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="SBOw" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.SBOw" />
+			<DA name="Oper" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.SBOw" />
+			<DA name="Cancel" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.Cancel" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+			<DA name="units" fc="CF" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.units" />
+		</DOType>
+		<DOType id="TRAFO5_2Meas.MMXU1.PPV.phsAB" cdc="CMV">
+			<DA name="cVal" fc="MX" bType="Struct" type="TRAFO5_2Meas.MMXU1.PPV.phsAB.cVal" />
+			<DA name="q" fc="MX" bType="Quality" />
+			<DA name="t" fc="MX" bType="Timestamp" />
+			<DA name="units" fc="CF" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.units" />
+			<DA name="db" fc="CF" bType="INT32U" />
+			<DA name="zeroDb" fc="CF" bType="INT32U" />
+			<DA name="rangeC" fc="CF" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC" />
+			<DA name="magSVC" fc="CF" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.sVC" />
+			<DA name="angSVC" fc="CF" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.sVC" />
+			<DA name="angRef" fc="CF" bType="Enum" type="angidCMV" />
+			<DA name="smpRate" fc="CF" bType="INT32U" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+			<DA name="subEna" fc="SV" bType="BOOLEAN" />
+			<DA name="subCVal" fc="SV" bType="Struct" type="TRAFO5_2Meas.MMXU1.PPV.phsAB.subCVal" />
+			<DA name="subQ" fc="SV" bType="Quality" />
+			<DA name="subID" fc="SV" bType="VisString64" />
+		</DOType>
+		<DOType id="TRAFO5_2Meas.MMXU1.PPV" cdc="DEL">
+			<SDO name="phsAB" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="phsBC" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="phsCA" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<DA name="angRef" fc="CF" bType="Enum" type="angid" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.GGIO1.DPCSO1" cdc="DPC">
+			<DA name="stVal" fc="ST" bType="Dbpos" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="SBOw" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw" />
+			<DA name="Oper" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw" />
+			<DA name="Cancel" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.Cancel" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+			<DA name="d" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.LPHD1.PhyNam" cdc="DPL">
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="hwRev" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="serNum" fc="DC" bType="VisString255" />
+			<DA name="model" fc="DC" bType="VisString255" />
+			<DA name="location" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.GGIO1.ISCSO1" cdc="INC">
+			<DA name="stVal" fc="ST" bType="INT32" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="SBOw" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.ISCSO1.SBOw" />
+			<DA name="Oper" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.ISCSO1.SBOw" />
+			<DA name="Cancel" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.ISCSO1.Cancel" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+			<DA name="minVal" fc="CF" bType="INT32" />
+			<DA name="maxVal" fc="CF" bType="INT32" />
+			<DA name="stepSize" fc="CF" bType="INT32U" />
+			<DA name="d" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.YLTC1.Mod" cdc="INC">
+			<DA name="stVal" fc="ST" bType="Enum" type="Mod" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.LLN0.Beh" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="Beh" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.LLN0.Health" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="Health" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.LPHD1.PhyHealth" cdc="INS">
+			<DA name="stVal" fc="ST" bType="Enum" type="Health" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.LLN0.NamPlt" cdc="LPL">
+			<DA name="paramRev" fc="ST" bType="INT32" />
+			<DA name="valRev" fc="ST" bType="INT32" />
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+			<DA name="configRev" fc="DC" bType="VisString255" />
+			<DA name="ldNs" fc="EX" bType="VisString255" />
+			<DA name="lnNs" fc="EX" bType="VisString255" />
+			<DA name="cdcNs" fc="EX" bType="VisString255" />
+			<DA name="cdcName" fc="EX" bType="VisString255" />
+			<DA name="dataNs" fc="EX" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.YLTC1.NamPlt" cdc="LPL">
+			<DA name="vendor" fc="DC" bType="VisString255" />
+			<DA name="swRev" fc="DC" bType="VisString255" />
+			<DA name="d" fc="DC" bType="VisString255" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.GGIO1.AnIn1" cdc="MV">
+			<DA name="mag" fc="MX" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.AnIn1.mag" />
+			<DA name="q" fc="MX" bType="Quality" />
+			<DA name="t" fc="MX" bType="Timestamp" />
+		</DOType>
+		<DOType id="TRAFO5_2Meas.MMXU1.TotW" cdc="MV">
+			<DA name="mag" fc="MX" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.AnIn1.mag" />
+			<DA name="q" fc="MX" bType="Quality" />
+			<DA name="t" fc="MX" bType="Timestamp" />
+			<DA name="units" fc="CF" bType="Struct" type="TRAFO5_2Ctrl.YLTC1.TapChg.units" />
+			<DA name="db" fc="CF" bType="INT32U" />
+			<DA name="zeroDb" fc="CF" bType="INT32U" />
+			<DA name="sVC" fc="CF" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.sVC" />
+			<DA name="rangeC" fc="CF" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC" />
+			<DA name="smpRate" fc="CF" bType="INT32U" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+			<DA name="subEna" fc="SV" bType="BOOLEAN" />
+			<DA name="subMag" fc="SV" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.subMag" />
+			<DA name="subQ" fc="SV" bType="Quality" />
+			<DA name="subID" fc="SV" bType="VisString64" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.GGIO1.SPCSO1" cdc="SPC">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="SBOw" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw" />
+			<DA name="Oper" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw" />
+			<DA name="Cancel" fc="CO" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.Cancel" />
+			<DA name="ctlModel" fc="CF" bType="Enum" type="ctlModel" />
+			<DA name="d" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.GGIO1.Ind1" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+			<DA name="d" fc="DC" bType="VisString255" />
+		</DOType>
+		<DOType id="TRAFO5_2Ctrl.YLTC1.TCIP" cdc="SPS">
+			<DA name="stVal" fc="ST" bType="BOOLEAN" />
+			<DA name="q" fc="ST" bType="Quality" />
+			<DA name="t" fc="ST" bType="Timestamp" />
+		</DOType>
+		<DOType id="TRAFO5_2Meas.MMXU1.PhV" cdc="WYE">
+			<SDO name="phsA" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="phsB" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="phsC" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="neut" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="net" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<SDO name="res" type="TRAFO5_2Meas.MMXU1.PPV.phsAB" />
+			<DA name="angRef" fc="CF" bType="Enum" type="angid" />
+			<DA name="dU" fc="DC" bType="Unicode255" />
+		</DOType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.AnIn1.mag">
+			<BDA name="f" bType="FLOAT32" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim">
+			<BDA name="f" bType="FLOAT32" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.TotW.subMag">
+			<BDA name="f" bType="FLOAT32" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin">
+			<BDA name="orCat" bType="Enum" type="orCategory" />
+			<BDA name="orIdent" bType="Octet64" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.YLTC1.TapChg.origin">
+			<BDA name="orCat" bType="Enum" type="orCategory" />
+			<BDA name="orIdent" bType="Octet64" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.TotW.rangeC">
+			<BDA name="hhLim" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+			<BDA name="hLim" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+			<BDA name="lLim" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+			<BDA name="llLim" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+			<BDA name="min" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+			<BDA name="max" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.rangeC.hhLim" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.TotW.sVC">
+			<BDA name="scaleFactor" bType="FLOAT32" />
+			<BDA name="offset" bType="FLOAT32" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.YLTC1.TapChg.units">
+			<BDA name="SIUnit" bType="Enum" type="SIUnit" />
+			<BDA name="multiplier" bType="Enum" type="multiplier" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.YLTC1.TapChg.valWTr">
+			<BDA name="posVal" bType="INT8" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.PPV.phsAB.cVal">
+			<BDA name="mag" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.AnIn1.mag" />
+			<BDA name="ang" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.AnIn1.mag" />
+		</DAType>
+		<DAType id="TRAFO5_2Meas.MMXU1.PPV.phsAB.subCVal">
+			<BDA name="mag" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.subMag" />
+			<BDA name="ang" bType="Struct" type="TRAFO5_2Meas.MMXU1.TotW.subMag" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.YLTC1.TapChg.SBOw">
+			<BDA name="ctlVal" bType="Tcmd" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+			<BDA name="Check" bType="Check" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.YLTC1.TapChg.Cancel">
+			<BDA name="ctlVal" bType="Tcmd" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw">
+			<BDA name="ctlVal" bType="BOOLEAN" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+			<BDA name="Check" bType="Check" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.SPCSO1.Cancel">
+			<BDA name="ctlVal" bType="BOOLEAN" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.ISCSO1.SBOw">
+			<BDA name="ctlVal" bType="INT32" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+			<BDA name="Check" bType="Check" />
+		</DAType>
+		<DAType id="TRAFO5_2Ctrl.GGIO1.ISCSO1.Cancel">
+			<BDA name="ctlVal" bType="INT32" />
+			<BDA name="origin" bType="Struct" type="TRAFO5_2Ctrl.GGIO1.SPCSO1.SBOw.origin" />
+			<BDA name="ctlNum" bType="INT8U" />
+			<BDA name="T" bType="Timestamp" />
+			<BDA name="Test" bType="BOOLEAN" />
+		</DAType>
+		<EnumType id="ctlModel">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">status-only</EnumVal>
+			<EnumVal ord="1">direct-with-normal-security</EnumVal>
+			<EnumVal ord="2">sbo-with-normal-security</EnumVal>
+			<EnumVal ord="3">direct-with-enhanced-security</EnumVal>
+			<EnumVal ord="4">sbo-with-enhanced-security</EnumVal>
+		</EnumType>
+		<EnumType id="orCategory">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">not-supported</EnumVal>
+			<EnumVal ord="1">bay-control</EnumVal>
+			<EnumVal ord="2">station-control</EnumVal>
+			<EnumVal ord="3">remote-control</EnumVal>
+			<EnumVal ord="4">automatic-bay</EnumVal>
+			<EnumVal ord="5">automatic-station</EnumVal>
+			<EnumVal ord="6">automatic-remote</EnumVal>
+			<EnumVal ord="7">maintenance</EnumVal>
+			<EnumVal ord="8">process</EnumVal>
+		</EnumType>
+		<EnumType id="multiplier">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="-24">y</EnumVal>
+			<EnumVal ord="-21">z</EnumVal>
+			<EnumVal ord="-18">a</EnumVal>
+			<EnumVal ord="-15">f</EnumVal>
+			<EnumVal ord="-12">p</EnumVal>
+			<EnumVal ord="-9">n</EnumVal>
+			<EnumVal ord="-6">µ</EnumVal>
+			<EnumVal ord="-3">m</EnumVal>
+			<EnumVal ord="-2">c</EnumVal>
+			<EnumVal ord="-1">d</EnumVal>
+			<EnumVal ord="0"></EnumVal>
+			<EnumVal ord="1">da</EnumVal>
+			<EnumVal ord="2">h</EnumVal>
+			<EnumVal ord="3">k</EnumVal>
+			<EnumVal ord="6">M</EnumVal>
+			<EnumVal ord="9">G</EnumVal>
+			<EnumVal ord="12">T</EnumVal>
+			<EnumVal ord="15">P</EnumVal>
+			<EnumVal ord="18">E</EnumVal>
+			<EnumVal ord="21">Z</EnumVal>
+			<EnumVal ord="24">Y</EnumVal>
+		</EnumType>
+		<EnumType id="SIUnit">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="1"></EnumVal>
+			<EnumVal ord="2">m</EnumVal>
+			<EnumVal ord="3">kg</EnumVal>
+			<EnumVal ord="4">s</EnumVal>
+			<EnumVal ord="5">A</EnumVal>
+			<EnumVal ord="6">K</EnumVal>
+			<EnumVal ord="7">mol</EnumVal>
+			<EnumVal ord="8">cd</EnumVal>
+			<EnumVal ord="9">deg</EnumVal>
+			<EnumVal ord="10">rad</EnumVal>
+			<EnumVal ord="11">sr</EnumVal>
+			<EnumVal ord="21">Gy</EnumVal>
+			<EnumVal ord="22">q</EnumVal>
+			<EnumVal ord="23">°C</EnumVal>
+			<EnumVal ord="24">Sv</EnumVal>
+			<EnumVal ord="25">F</EnumVal>
+			<EnumVal ord="26">C</EnumVal>
+			<EnumVal ord="27">S</EnumVal>
+			<EnumVal ord="28">H</EnumVal>
+			<EnumVal ord="29">V</EnumVal>
+			<EnumVal ord="30">ohm</EnumVal>
+			<EnumVal ord="31">J</EnumVal>
+			<EnumVal ord="32">N</EnumVal>
+			<EnumVal ord="33">Hz</EnumVal>
+			<EnumVal ord="34">lx</EnumVal>
+			<EnumVal ord="35">Lm</EnumVal>
+			<EnumVal ord="36">Wb</EnumVal>
+			<EnumVal ord="37">T</EnumVal>
+			<EnumVal ord="38">W</EnumVal>
+			<EnumVal ord="39">Pa</EnumVal>
+			<EnumVal ord="41">m²</EnumVal>
+			<EnumVal ord="42">m³</EnumVal>
+			<EnumVal ord="43">m/s</EnumVal>
+			<EnumVal ord="44">m/s²</EnumVal>
+			<EnumVal ord="45">m³/s</EnumVal>
+			<EnumVal ord="46">m/m³</EnumVal>
+			<EnumVal ord="47">M</EnumVal>
+			<EnumVal ord="48">kg/m³</EnumVal>
+			<EnumVal ord="49">m²/s</EnumVal>
+			<EnumVal ord="50">W/m K</EnumVal>
+			<EnumVal ord="51">J/K</EnumVal>
+			<EnumVal ord="52">ppm</EnumVal>
+			<EnumVal ord="53">1/s</EnumVal>
+			<EnumVal ord="54">rad/s</EnumVal>
+			<EnumVal ord="61">VA</EnumVal>
+			<EnumVal ord="62">Watts</EnumVal>
+			<EnumVal ord="63">VAr</EnumVal>
+			<EnumVal ord="64">phi</EnumVal>
+			<EnumVal ord="65">cos(phi)</EnumVal>
+			<EnumVal ord="66">Vs</EnumVal>
+			<EnumVal ord="67">V²</EnumVal>
+			<EnumVal ord="68">As</EnumVal>
+			<EnumVal ord="69">A²</EnumVal>
+			<EnumVal ord="70">A²t</EnumVal>
+			<EnumVal ord="71">VAh</EnumVal>
+			<EnumVal ord="72">Wh</EnumVal>
+			<EnumVal ord="73">VArh</EnumVal>
+			<EnumVal ord="74">V/Hz</EnumVal>
+		</EnumType>
+		<EnumType id="angidCMV">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">V</EnumVal>
+			<EnumVal ord="1">A</EnumVal>
+			<EnumVal ord="2">other</EnumVal>
+		</EnumType>
+		<EnumType id="angid">
+			<!--Source: IEC 61850-7-3:2003-->
+			<EnumVal ord="0">Va</EnumVal>
+			<EnumVal ord="1">Vb</EnumVal>
+			<EnumVal ord="2">Vc</EnumVal>
+			<EnumVal ord="3">Aa</EnumVal>
+			<EnumVal ord="4">Ab</EnumVal>
+			<EnumVal ord="5">Ac</EnumVal>
+			<EnumVal ord="6">Vab</EnumVal>
+			<EnumVal ord="7">Vbc</EnumVal>
+			<EnumVal ord="8">Vca</EnumVal>
+			<EnumVal ord="9">Vother</EnumVal>
+			<EnumVal ord="10">Aother</EnumVal>
+		</EnumType>
+		<EnumType id="Beh">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="2">blocked</EnumVal>
+			<EnumVal ord="3">test</EnumVal>
+			<EnumVal ord="4">test/blocked</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+		<EnumType id="Health">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">Ok</EnumVal>
+			<EnumVal ord="2">Warning</EnumVal>
+			<EnumVal ord="3">Alarm</EnumVal>
+		</EnumType>
+		<EnumType id="Mod">
+			<!--Source: IEC 61850-7-4:2003-->
+			<EnumVal ord="1">on</EnumVal>
+			<EnumVal ord="2">blocked</EnumVal>
+			<EnumVal ord="3">test</EnumVal>
+			<EnumVal ord="4">test/blocked</EnumVal>
+			<EnumVal ord="5">off</EnumVal>
+		</EnumType>
+	</DataTypeTemplates>
+</SCL>
