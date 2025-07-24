@@ -165,6 +165,7 @@ if __name__ == '__main__':
 
     data_types = {
         'measuredvaluescaled': lib60870.MeasuredValueScaled,
+        'measuredvaluefloat': lib60870.MeasuredValueShort, # <-- PERUBAHAN DI SINI
         'singlepointinformation': lib60870.SinglePointInformation,
         'doublepointinformation': lib60870.DoublePointInformation,
     }
