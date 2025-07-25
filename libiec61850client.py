@@ -3,7 +3,7 @@
 import os,sys
 import ctypes
 import time
-import lib61850
+import lib61850 # Assuming this was a typo in the original and should be lib61850
 import logging
 
 from urllib.parse import urlparse
@@ -115,9 +115,6 @@ class iec61850client():
                 if _type == "mms-string":
                         return lib61850.MmsValue_toString(value).decode("utf-8"), _type
                 if _type == "structure":
-                        # === BAGIAN YANG DIPERBAIKI (FINAL) ===
-                        # Menghapus blok try-finally dan MmsValue_delete(component)
-                        # Manajemen memori diserahkan sepenuhnya ke pemanggil tingkat atas
                         sub_list = []
                         size = lib61850.MmsValue_getArraySize(value)
                         for i in range(size):
@@ -126,7 +123,6 @@ class iec61850client():
                                         component_value, _ = iec61850client.printValue(component)
                                         sub_list.append(component_value)
                         return sub_list, _type
-                        # === AKHIR BAGIAN YANG DIPERBAIKI ===
                 if _type == "octet-string":
                         len_val = lib61850.MmsValue_getOctetStringSize(value)
                         buf = lib61850.MmsValue_getOctetStringBuffer(value)
@@ -526,10 +522,10 @@ class iec61850client():
                 port = uri_ref.port or 102
                 if uri_ref.scheme != "iec61850":
                         logger.error(f"incorrect scheme, only iec61850 is supported, not {uri_ref.scheme}")
-                        return -1
+                        return -1, "incorrect scheme"
                 if not uri_ref.hostname:
                         logger.error(f"missing hostname: {ref}")
-                        return -1
+                        return -1, "missing hostname"
 
                 tupl = f"{uri_ref.hostname}:{port}"
                 if self.getIED(uri_ref.hostname, port) == 0:
@@ -537,7 +533,7 @@ class iec61850client():
                         model = self.connections[tupl]['model']
                         if not con or not model:
                                 logger.error("no valid connection or model")
-                                return -1
+                                return -1, "no valid connection or model"
 
                         _, error = iec61850client.writeValue(con, model, uri_ref.path[1:], value)
                         if error == 0:
@@ -545,23 +541,23 @@ class iec61850client():
                                 logger.debug(f"Value '{submodel}' written to {ref}")
                                 if self.readvaluecallback:
                                         self.readvaluecallback(ref, submodel)
-                                return 0
+                                return 0, "no error"
                         else:
                                 logger.error(f"could not write '{value}' to {ref} with error: {error}")
                                 if error == 3:
                                         lib61850.IedConnection_destroy(con)
                                         self.connections[tupl]['con'] = None
-                                return error
+                                return error, "write failed"
                 else:
                         logger.error(f"no connection to IED: {uri_ref.hostname}:{port}")
-                return -1
+                return -1, "no connection"
 
 
         def ReadValue(self, ref):
                 uri_ref = urlparse(ref)
                 port = uri_ref.port or 102
                 if uri_ref.scheme != "iec61850":
-                        logger.error(f"incorrect scheme, only iec61860 is supported, not {uri_ref.scheme}")
+                        logger.error(f"incorrect scheme, only iec61850 is supported, not {uri_ref.scheme}")
                         return {}, -1
                 if not uri_ref.hostname:
                         logger.error(f"missing hostname: {ref}")
@@ -619,7 +615,12 @@ class iec61850client():
                                         if submodel:
                                                 submodel["value"] = val
                                                 if self.Rpt_cb:
-                                                        self.Rpt_cb(key, submodel)
+                                                        # ==========================================================
+                                                        # !!! INI BAGIAN YANG DIPERBAIKI !!!
+                                                        # Menggunakan 'DaRef' (kunci dinamis) bukan 'key' (kunci statis).
+                                                        # 'DaRef' berisi referensi objek yang benar untuk data saat ini dalam loop.
+                                                        self.Rpt_cb(DaRef, submodel)
+                                                        # ==========================================================
 
 
         def registerForReporting(self, key, tupl, ref_path):
