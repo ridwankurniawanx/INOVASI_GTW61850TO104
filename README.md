@@ -68,11 +68,9 @@ cd to the client project dir.
 
 then start the app;
 
-`$ python3 app.py`
+`$ python3 gateway.py` or `gateway_polling.py`
 
 WARNING: the default config file used is config.local.ini. This assumes you have IEC61850 IED's running. You can set these up by cloning iec61850_open_server:
-
-`$ git clone git@github.com:robidev/iec61850_open_server.git`
 
 build it local
 
