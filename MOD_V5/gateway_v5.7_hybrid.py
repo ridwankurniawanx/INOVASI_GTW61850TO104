@@ -2,6 +2,7 @@
 # gateway_v5.7.py - Polling & Hybrid Mode
 # Deskripsi: Gateway IEC 61850 ke IEC 60870-5-104 menggunakan asyncio.
 # Fitur v5.7 (Modifikasi): Implementasi mode hibrid polling-reporting yang andal.
+# belum di test
 
 import asyncio
 import json
