@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-# gateway_v5.7.py - Polling & Hybrid Mode
+# gateway_v5.7.py - Polling & Hybrid Mode (Fixed)
 # Deskripsi: Gateway IEC 61850 ke IEC 60870-5-104 menggunakan asyncio.
-# Fitur v5.7 (Modifikasi): Implementasi mode hibrid polling-reporting yang andal.
-# belum di test
+# Fitur v5.7 (Perbaikan): Menghapus bug crash 'AttributeError' dan memastikan resiliensi.
 
 import asyncio
 import json
@@ -21,10 +20,8 @@ from lib61850 import IedConnection_getState
 
 # --- Definisikan konstanta ---
 CON_STATE_NOT_CONNECTED, CON_STATE_CONNECTING, CON_STATE_CONNECTED, CON_STATE_CLOSING, CON_STATE_CLOSED = 0, 1, 2, 3, 4
-# Atur interval polling dalam detik. Skrip akan aktif membaca semua data setiap 5 detik.
 POLLING_INTERVAL = 5
 RECONNECT_DELAY = 15
-# Jeda singkat antar request polling dalam satu siklus untuk tidak membebani IED
 POLL_REQUEST_DELAY = 0.05 
 
 # --- Variabel & Objek Global ---
@@ -36,7 +33,7 @@ update_queue = asyncio.Queue()
 shutdown_event = asyncio.Event()
 iec104_server = None
 
-# --- Fungsi-fungsi utilitas & callback sinkronus ---
+# --- Fungsi-fungsi utilitas & callback sinkronus (TIDAK ADA PERUBAHAN DI SINI) ---
 
 def find_first_float(data):
     if isinstance(data, float): return data
@@ -175,7 +172,6 @@ async def ied_handler(ied_id, uris):
         
     def locked_check_state():
         with ied_lock:
-            # Pengecekan ini penting untuk memastikan objek koneksi masih valid
             if not client or not client.getRegisteredIEDs().get(ied_id, {}).get('con'):
                 return False
             all_conns = client.getRegisteredIEDs()
@@ -191,7 +187,6 @@ async def ied_handler(ied_id, uris):
             with ied_lock:
                 client = libiec61850client.iec61850client(ied_specific_callback, logging, None, Rpt_cb_specific)
             
-            # Pendaftaran URI tetap diperlukan agar callback bisa dipetakan dengan benar
             for uri in uris:
                 res = await loop.run_in_executor(None, locked_register, str(uri))
                 if res != 0: raise ConnectionError(f"Failed to register URI: {uri}")
@@ -200,7 +195,6 @@ async def ied_handler(ied_id, uris):
                 ied_clients[ied_id] = client
             logging.info(f"[{ied_id}] Connection successful.")
 
-            # --- LOGIKA BARU: HYBRID POLLING & REPORTING ---
             while not shutdown_event.is_set():
                 is_connected = await loop.run_in_executor(None, locked_check_state)
                 if not is_connected:
@@ -209,32 +203,31 @@ async def ied_handler(ied_id, uris):
                 logging.debug(f"[{ied_id}] Starting polling cycle...")
                 for uri in uris:
                     try:
-                        # client.ReadValue akan memicu callback secara otomatis jika berhasil
                         with ied_lock:
                            await loop.run_in_executor(None, lambda: client.ReadValue(str(uri)))
-                        # Beri jeda singkat antar request
                         await asyncio.sleep(POLL_REQUEST_DELAY)
                     except Exception as e:
                         logging.warning(f"[{ied_id}] Failed to poll {uri}: {e}")
                 
                 logging.debug(f"[{ied_id}] Polling cycle finished. Waiting for {POLLING_INTERVAL}s.")
-                # Tunggu untuk siklus polling berikutnya.
-                # Jika ada report masuk di antara waktu ini, callback akan tetap dieksekusi.
                 await asyncio.sleep(POLLING_INTERVAL)
 
         except Exception as e:
+            # ### PERBAIKAN UTAMA DI SINI ###
             logging.error(f"[{ied_id}] Handler error: {e}. Reconnecting in {RECONNECT_DELAY}s.")
             with clients_dict_lock:
                 if ied_id in ied_clients:
-                    # Hancurkan objek klien untuk memastikan koneksi bersih saat reconnect
-                    with ied_lock:
-                        client.destroy()
+                    # Menghapus referensi klien. Tidak ada client.destroy()
                     del ied_clients[ied_id]
+            
+            # Memanggil fungsi invalidasi untuk dikirim ke 104
             invalidate_ied_points(ied_id)
+            
             try:
+                # Menunggu untuk reconnect tanpa menghentikan gateway
                 await asyncio.wait_for(shutdown_event.wait(), timeout=RECONNECT_DELAY)
             except asyncio.TimeoutError:
-                pass
+                pass # Lanjutkan loop untuk mencoba reconnect
 
 async def iec104_processor():
     logging.info("IEC 104 processor task started.")
@@ -253,13 +246,13 @@ async def iec104_processor():
 async def main():
     global iec104_server
     logging.basicConfig(format='%(asctime)s [%(levelname)s] %(message)s', level=logging.INFO)
-    logger = logging.getLogger('gateway-async-hybrid')
+    logger = logging.getLogger('gateway-async-hybrid-fixed')
     
     config = configparser.ConfigParser(); config.optionxform = str
     config_file = sys.argv[1] if len(sys.argv) > 1 else 'config.local.ini'
     if not os.path.exists(config_file): logger.error(f"Config file not found: {config_file}"); sys.exit(1)
     config.read(config_file)
-    logger.info("Gateway v5.7 (Asyncio, Hybrid Polling Mode) started")
+    logger.info("Gateway v5.7 (Asyncio, Hybrid Polling Mode, Fixed) started")
 
     iec104_server = libiec60870server.IEC60870_5_104_server()
     data_types = {'measuredvaluescaled': MeasuredValueScaled, 'measuredvaluefloat': MeasuredValueShort,
@@ -282,7 +275,6 @@ async def main():
                 if section in data_types:
                     mms_to_ioa_map[parsed.path.lstrip('/')] = ioa_int
                     if ied_id not in ied_data_groups: ied_data_groups[ied_id] = []
-                    # Pastikan tidak ada URI duplikat
                     if uri_part not in ied_data_groups[ied_id]:
                         ied_data_groups[ied_id].append(uri_part)
                 if should_invert: ioa_inversion_map[ioa_int] = True
